@@ -17,8 +17,8 @@ In the following, I will introduce all programme in this project:
 * 'MFA1d.py': calculate the excess chemcial potential of attractive part of Lennard-Jones potential by using mean field theory. *do not use correlation functional ('corChemicalPotential')*
 * 'FMSA1d.py': calculate the excess chemical potential of the attractive part of Lennard-Jones potential by using first-order mean spherical approximation proposed by Y. Tang.
 * 'Vext.py': calculate the external potential, contains hard wall and 10-4-3 wall.
-* 'ADAM.py': the ADAM algorithm for solving a ordinary differential equation, however, rk45 in scipy is faster and more robust, which means I do not recommend to use it.
-* 'DDFT.py': the programme for dynamical density functional theory which inherit from the 'dft1d.py'.
+* 'ADAM.py': the ADAM algorithm for solving an ordinary differential equation, however, rk45 in scipy is faster and more robust, which means I do not recommend to use it.
+* 'DDFT.py': the programme for dynamical density functional theory which inherits from the 'dft1d.py'.
 * "MSA1d.py": **this programme contains some mistake, do not use it.**
 
 ## unit 
@@ -27,13 +27,11 @@ Here, I will introduce all unit used in this programme.
 
 ### the reduced temperature
 
-$$
-beta   = 1 / (Kb * Na * T)
-[beta] = kJ / mol
-kb = 1.38 * 10^(-23) J/K
-Na = 6.02 * 10^23 (1/mol)
-kb * Na / 1000 = 0.0083076
-$$
+$\beta   = 1 / (Kb * Na * T)$
+$[\beta] = kJ / mol$
+$kb = 1.38 * 10^(-23) J/K$
+$Na = 6.02 * 10^23 (1/mol)$
+$kb * Na / 1000 = 0.0083076$
 
 which means when $\beta$ is equal to one, the temperature is equal to $120.371K (1/0.0083076)$.
 
@@ -51,15 +49,15 @@ and $\epsilon_r$ is the relative permittivity, which is a dimensionless number.
 
 Hence, the reduced Bjerrum length is equal to 
 
-$$
+$
 \beta l_b / \sigma_L = \frac{ (1.6 \times 10^{-19})^2 }{ 4 \pi (1.38 \times 10^{-23}) T (8.854 \times 10^{-12}) \sigma_L }.
-$$
+$
 
 As we mentioned before, the above equation can be written as 
 
-$$
+$
 \beta l_b / \sigma_L = \frac{ (1.6 \times 10^{-19})^2 \times 6.02 \times 10^{23} / 1000 }{ 4 \pi (8.854 \times 10^{-12}) T^* \sigma_L },
-$$
+$
 
 The $\sigma_L$ is the unit length which is assumed as $5.0\times10^{-10}m$
 
