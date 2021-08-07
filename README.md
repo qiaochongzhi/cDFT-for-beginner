@@ -3,7 +3,7 @@ This is a project of 1D classical density functional theory for beginner
 
 ## Framework
 
-This is a ongoing project, it contains a hard-sphere or a Lennard-Jones fluid confined in a slit pore or around a single wall.
+This is a ongoing project, it contains multicomponent hard-sphere or Lennard-Jones fluids confined in a slit pore or around a single wall.
 This project is to help the beginner to understand the framework of classical density functional theory.
 I strongly recommend you read the code carefully, before you use it to do any calculation. 
 Before use it, please make sure 'scipy', 'numpy', 'matplotlib' and 'numba' have been installed.
@@ -14,11 +14,11 @@ In the following, I will introduce all programme in this project:
 * 'BMCSL_EOS.py': the equation of state for hard-sphere fluids (J. Chem. Phys. 1971 54, 1523).
 * 'Functional.py': define some general useful functions for calculating the chemical potential.
 * 'FMT1d.py': calculate the excess chemcial potential of hard-sphere interaction proposed by Rosenfeld in 1989, and improved by Prof. Wu or Prof. Roth. (PRL 1989)
-* 'MFA1d.py': calculate the excess chemcial potential of attractive part of Lennard-Jones potential by using mean field theory. *do not use correlation functional ('corChemicalPotential')*
+* 'MFA1d.py': calculate the excess chemcial potential of attractive part of Lennard-Jones potential by using mean field theory. *do not use correlation functional ('corChemicalPotential'), may has some error.*
 * 'FMSA1d.py': calculate the excess chemical potential of the attractive part of Lennard-Jones potential by using first-order mean spherical approximation proposed by Y. Tang.
 * 'Vext.py': calculate the external potential, contains hard wall and 10-4-3 wall.
-* 'ADAM.py': the ADAM algorithm for solving an ordinary differential equation, however, rk45 in scipy is faster and more robust, which means I do not recommend to use it.
-* 'DDFT.py': the programme for dynamical density functional theory which inherits from the 'dft1d.py'.
+* 'ADAM.py': the ADAM algorithm for solving an ordinary differential equation, however, rk45 in scipy is faster and more robust, so I do not recommend to use it.
+* 'DDFT.py': the programme for dynamical density functional theory which inherits from the 'dft1d.py', contains two part, one is based on ADAM, the other based on RK45. The framework of DDFT can be found in (Vrugt, Advances in Physics, 2020, 69(2), 121-247).
 * "MSA1d.py": **this programme contains some mistake, do not use it.**
 
 ## unit 
