@@ -1,5 +1,5 @@
 # cDFT-for-beginner
-This is a project of 1D classical functional theory for beginner
+This is a project of 1D classical density functional theory for beginner
 
 ## Framework
 
